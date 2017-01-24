@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.ecom.app</groupId>
     <artifactId>ecom</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${release.version}</version>
   </parent>
   <artifactId>ecom-domain</artifactId>
   <name>ecom-domain</name>

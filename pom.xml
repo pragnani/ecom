@@ -3,11 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ecom.app</groupId>
 	<artifactId>ecom</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${release.version}</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<release.version>0.0.1</release.version>
 		<spring.boot.version>1.4.3.RELEASE</spring.boot.version>
 	</properties>
 
@@ -17,6 +18,7 @@
 		<module>ecom-web-client</module>
 		<module>ecom-web</module>
 		<module>ecom-services</module>
+		<module>ecom-representation</module>
 	</modules>
 
 	<dependencyManagement>

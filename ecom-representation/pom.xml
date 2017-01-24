@@ -5,6 +5,7 @@
     <artifactId>ecom</artifactId>
     <version>${release.version}</version>
   </parent>
-  <artifactId>ecom-presentation</artifactId>
-  <name>ecom-presentation</name>
+  <artifactId>ecom-representation</artifactId>
+  <name>ecom-representation</name>
+  <description>For HAL representation objects in service layer</description>
 </project>
