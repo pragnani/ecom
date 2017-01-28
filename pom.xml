@@ -19,6 +19,7 @@
 		<module>ecom-web</module>
 		<module>ecom-services</module>
 		<module>ecom-representation</module>
+		<module>ecom-config-server</module>
 	</modules>
 
 	<dependencyManagement>
