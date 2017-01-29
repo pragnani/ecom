@@ -69,9 +69,52 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-client</artifactId>
+		</dependency>
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<active.profile.id>dev</active.profile.id>
+			</properties>
+		</profile>
+		<profile>
+			<id>qa</id>
+			<properties>
+				<active.profile.id>dev</active.profile.id>
+			</properties>
+		</profile>
+		<profile>
+			<id>uat</id>
+			<properties>
+				<active.profile.id>dev</active.profile.id>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<active.profile.id>dev</active.profile.id>
+			</properties>
+		</profile>
+	</profiles>
+
 
 	<build>
+		<filters>
+			<filter>${project.basedir}/src/main/resources/config/${active.profile.id}/application.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
