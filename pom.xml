@@ -35,6 +35,11 @@
 			<artifactId>spring-cloud-config-client</artifactId>
 			<version>${spring.cloud.config.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.ecom.app</groupId>
+			<artifactId>ecom-domain</artifactId>
+			<version>${release.version}</version>
+		</dependency>
 		</dependencies>
 	</dependencyManagement>
 
