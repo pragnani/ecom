@@ -9,10 +9,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+
 @Entity
 @Table(name = "ecom_address")
 @Access(AccessType.FIELD)
-public class Address extends AbstractEntity implements IAddress {
+public class Address extends AbstractEntity implements IAddress, BeanPostProcessor{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,6 +70,21 @@ public class Address extends AbstractEntity implements IAddress {
 
 	public void setAddressId(Long addressId) {
 		this.addressId = addressId;
+	}
+
+	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
