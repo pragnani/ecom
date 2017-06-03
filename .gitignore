@@ -7,3 +7,7 @@ target/*
 .classpth
 .mvn/*
 */.mvn/*
+node/*
+node_modules/*
+build/*
+typings/*
