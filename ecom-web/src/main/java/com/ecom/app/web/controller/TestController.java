@@ -15,8 +15,8 @@ public class TestController {
 	@Value("${application.env.name}")
 	private String applicationEnvName;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public @ResponseBody String getHelloWorld() {
-		return "Hello world "+ applicationEnvName;
+		return "Hello world "+applicationEnvName;
 	}
 }
